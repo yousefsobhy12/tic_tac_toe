@@ -10,10 +10,12 @@ import 'package:flutter_test/flutter_test.dart';
 
 import 'package:tic_tac_toe/main.dart';
 
-void main() {
+void main(dynamic themeService) {
+    var initTheme = themeService.initial;
+
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(const TicTacToe());
+    await tester.pumpWidget(TicTacToe(theme: initTheme,));
 
     // Verify that our counter starts at 0.
     expect(find.text('0'), findsOneWidget);
