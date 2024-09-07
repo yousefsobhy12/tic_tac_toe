@@ -19,17 +19,17 @@ class CustomTextField extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: Container(
         margin: const EdgeInsets.only(bottom: 15),
-        child: TextField(inputFormatters: [
-        LengthLimitingTextInputFormatter(8),
-        // FilteringTextInputFormatter.allow(RegExp(r'[a-zA-Z]')),
-      ],
+        child: TextField(
+          inputFormatters: [
+            LengthLimitingTextInputFormatter(8),
+          ],
           enabled: true,
           controller: controller,
           maxLength: 32,
           maxLines: 1,
           textAlign: TextAlign.start,
           style: const TextStyle(
-            color: Colors.white,
+            color: Colors.blueGrey,
             fontSize: 16,
           ),
           decoration: InputDecoration(
@@ -40,15 +40,15 @@ class CustomTextField extends StatelessWidget {
             counterText: "",
             labelStyle: const TextStyle(color: Colors.grey),
             border: const OutlineInputBorder(
-              borderSide: BorderSide(color: Colors.white),
+              borderSide: BorderSide(color: Colors.blueGrey),
               borderRadius: BorderRadius.all(Radius.circular(10)),
             ),
             focusedBorder: const OutlineInputBorder(
-              borderSide: BorderSide(color: Colors.white),
+              borderSide: BorderSide(color: Colors.blueGrey),
               borderRadius: BorderRadius.all(Radius.circular(10)),
             ),
             enabledBorder: const OutlineInputBorder(
-              borderSide: BorderSide(color: Colors.white),
+              borderSide: BorderSide(color: Colors.blueGrey),
               borderRadius: BorderRadius.all(Radius.circular(10)),
             ),
           ),
