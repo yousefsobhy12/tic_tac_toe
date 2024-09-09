@@ -31,14 +31,21 @@ class CustomTextField extends StatelessWidget {
           style: const TextStyle(
             color: Colors.blueGrey,
             fontSize: 16,
+            fontFamily: 'ToyBox',
           ),
           decoration: InputDecoration(
             contentPadding: const EdgeInsets.all(20),
             prefixIcon: Icon(prefixIcon),
             isDense: true,
             labelText: name,
+            floatingLabelStyle: const TextStyle(
+              fontFamily: 'ToyBox',
+            ),
             counterText: "",
-            labelStyle: const TextStyle(color: Colors.grey),
+            labelStyle: const TextStyle(
+              color: Colors.grey,
+              fontFamily: 'ToyBox',
+            ),
             border: const OutlineInputBorder(
               borderSide: BorderSide(color: Colors.blueGrey),
               borderRadius: BorderRadius.all(Radius.circular(10)),

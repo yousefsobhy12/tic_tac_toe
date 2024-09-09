@@ -10,8 +10,10 @@ class GameView extends StatefulWidget {
     required this.player1,
     required this.player2,
   });
+
   String player1;
   String player2;
+
   @override
   State<GameView> createState() => _GameViewState();
 }
@@ -37,7 +39,10 @@ class _GameViewState extends State<GameView> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text('Tic Tac Toe'),
+        title: const Text(
+          'Tic Tac Toe',
+          style: TextStyle(fontFamily: 'ToyBox'),
+        ),
       ),
       body: Column(
         children: [
@@ -60,7 +65,7 @@ class _GameViewState extends State<GameView> {
               children: [
                 Expanded(
                   child: CustomButton(
-                    text: buttonState[0],
+                    text: buttonState[0] ,
                     onPressed: onClickButton,
                     index: 0,
                   ),
@@ -151,6 +156,7 @@ class _GameViewState extends State<GameView> {
   }
 
   int counter = 0;
+
   void onClickButton(int index) {
     if (buttonState[index].isNotEmpty) {
       return;
@@ -218,14 +224,20 @@ class _GameViewState extends State<GameView> {
     return showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: Text(titleText),
+        title: Text(titleText,
+          style: const TextStyle(
+            fontFamily: 'ToyBox',
+          ),),
         content: content != null ? Text(content) : null,
         actions: [
           TextButton(
             onPressed: () {
               Navigator.pop(context);
             },
-            child: const Text('Close'),
+            child: const Text('Close',
+              style: TextStyle(
+                fontFamily: 'ToyBox',
+              ),),
           ),
         ],
       ),

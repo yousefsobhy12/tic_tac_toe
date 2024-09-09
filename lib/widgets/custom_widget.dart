@@ -6,7 +6,8 @@ class CustomButton extends StatelessWidget {
   Function? onPressed;
   int? index;
 
-  CustomButton({super.key, 
+  CustomButton({
+    super.key,
     this.text,
     this.onPressed,
     this.index,
@@ -29,6 +30,7 @@ class CustomButton extends StatelessWidget {
           '$text',
           style: const TextStyle(
             fontSize: 30,
+            fontFamily: 'ToyBox',
           ),
         ),
       ),

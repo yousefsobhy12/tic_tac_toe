@@ -8,6 +8,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
+
   static const String pageRoute = 'homeView';
 
   @override
@@ -24,7 +25,12 @@ class _HomeViewState extends State<HomeView> {
       child: Scaffold(
         appBar: AppBar(
           centerTitle: true,
-          title: const Text('Enter players\' Names'),
+          title: const Text(
+            'Enter players\' Names',
+            style: TextStyle(
+              fontFamily: 'ToyBox',
+            ),
+          ),
           actions: [
             Padding(
               padding: const EdgeInsets.only(right: 6),
@@ -85,7 +91,12 @@ class _HomeViewState extends State<HomeView> {
                 fit: BoxFit.scaleDown,
                 child: Row(
                   children: [
-                    Text('Let\'s go'),
+                    Text(
+                      'Let\'s go',
+                      style: TextStyle(
+                        fontFamily: 'ToyBox',
+                      ),
+                    ),
                     SizedBox(
                       width: 4,
                     ),

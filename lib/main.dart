@@ -19,11 +19,7 @@ class TicTacToe extends StatelessWidget {
   @override
     Widget build(BuildContext context) {
     return ThemeProvider(
-      initTheme: theme.copyWith(
-        textTheme: theme.textTheme.apply(
-          fontFamily: 'ToyBox',
-        ),
-      ),
+      initTheme: theme,
       builder: (_, theme) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,

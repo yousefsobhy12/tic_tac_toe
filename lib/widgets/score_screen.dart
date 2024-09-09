@@ -16,6 +16,7 @@ class ScoreScreen extends StatefulWidget {
   String player1;
   String player2;
   Function? resetScore;
+
   @override
   State<ScoreScreen> createState() => _ScoreScreenState();
 }
@@ -34,11 +35,17 @@ class _ScoreScreenState extends State<ScoreScreen> {
                 children: [
                   Text(
                     '${widget.player1} (X)',
-                    style: const TextStyle(fontSize: 25),
+                    style: const TextStyle(
+                      fontSize: 25,
+                      fontFamily: 'ToyBox',
+                    ),
                   ),
                   Text(
                     'Score: ${widget.player1Score}',
-                    style: const TextStyle(fontSize: 30),
+                    style: const TextStyle(
+                      fontSize: 28,
+                      fontFamily: 'ToyBox',
+                    ),
                   ),
                 ],
               ),
@@ -46,11 +53,17 @@ class _ScoreScreenState extends State<ScoreScreen> {
                 children: [
                   Text(
                     '${widget.player2} (O)',
-                    style: const TextStyle(fontSize: 25),
+                    style: const TextStyle(
+                      fontSize: 25,
+                      fontFamily: 'ToyBox',
+                    ),
                   ),
                   Text(
                     'Score: ${widget.player2Score}',
-                    style: const TextStyle(fontSize: 30),
+                    style: const TextStyle(
+                      fontSize: 28,
+                      fontFamily: 'ToyBox',
+                    ),
                   ),
                 ],
               ),
@@ -63,7 +76,12 @@ class _ScoreScreenState extends State<ScoreScreen> {
             onPressed: () {
               widget.resetScore!();
             },
-            child: const Text('Reset Score'),
+            child: const Text(
+              'Reset Score',
+              style: TextStyle(
+                fontFamily: 'ToyBox',fontSize: 12
+              ),
+            ),
           )
         ],
       ),
